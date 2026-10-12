@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VocoTrans | AI Speech & Translation</title>
+  <!-- Static UI structure only: no actual backend or JavaScript. -->
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; color: #202633; }
+    header, footer { padding: 20px 8%; background: #f3f6fa; }
+    nav { display: flex; align-items: center; gap: 24px; }
+    nav a { color: inherit; text-decoration: none; }
+    main { max-width: 1050px; margin: auto; padding: 32px 20px; }
+    section { margin-bottom: 28px; padding: 22px; border: 1px solid #ddd; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    label { display: block; margin: 12px 0 6px; }
+    textarea, select, input { width: 100%; box-sizing: border-box; padding: 9px; }
+    button { padding: 10px 16px; margin: 8px 8px 0 0; cursor: pointer; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <strong>VocoTrans</strong>
+      <a href="#workspace">Workspace</a>
+      <a href="#projects">Projects</a>
+      <a href="#exports">Exports</a>
+      <a href="#account">Account</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="intro-title">
+      <h1 id="intro-title">AI Speech & Translation Workspace</h1>
+      <p>Transcribe, translate, and generate multilingual speech.</p>
+    </section>
+
+    <section id="workspace" aria-labelledby="workspace-title">
+      <h2 id="workspace-title">Live Audio & Translation</h2>
+      <div class="grid">
+        <div>
+          <label for="source-language">Source language</label>
+          <select id="source-language">
+            <option>Auto Detect</option>
+            <option>English</option>
+            <option>Persian</option>
+          </select>
+          <label for="source-text">Original Transcript</label>
+          <textarea id="source-text" rows="8" placeholder="Speech or text appears here..."></textarea>
+        </div>
+        <div>
+          <label for="target-language">Target language</label>
+          <select id="target-language">
+            <option>English</option>
+            <option>Persian</option>
+            <option>Turkish</option>
+          </select>
+          <label for="translated-text">Translation</label>
+          <textarea id="translated-text" rows="8" placeholder="Translated text appears here..."></textarea>
+        </div>
+      </div>
+      <div class="toolbar">
+        <button type="button">Start Live Transcription</button>
+        <button type="button">Stop Recording</button>
+        <button type="button">Translate Text</button>
+        <button type="button">Generate Speech</button>
+      </div>
+      <label for="audio-upload">Upload audio</label>
+      <input id="audio-upload" type="file" accept="audio/*">
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Project Management</h2>
+      <label for="project-name">Project name</label>
+      <input id="project-name" type="text" placeholder="Untitled Project">
+      <button type="button">Save Project</button>
+      <button type="button">Open Projects</button>
+    </section>
+
+    <section id="exports" aria-labelledby="exports-title">
+      <h2 id="exports-title">Export Results</h2>
+      <label for="export-format">File format</label>
+      <select id="export-format">
+        <option>TXT</option><option>DOCX</option><option>SRT</option>
+        <option>CSV</option><option>XLSX</option>
+        <option>MP3</option><option>WAV</option>
+      </select>
+      <button type="button">Export File</button>
+    </section>
+
+    <section id="account" aria-labelledby="account-title">
+      <h2 id="account-title">Account</h2>
+      <p>Sign in to manage your saved work and preferences.</p>
+      <button type="button">Sign In</button>
+    </section>
+  </main>
+  <footer>VocoTrans — illustrative interface preview</footer>
+</body>
+</html>
